@@ -6,7 +6,7 @@ pip install scrap-ecoledirect
 ```
 or 
 ```sh
-pip install git+https://github.com/Snowy-27/scrap-ecoledirect
+pip install git+https://github.com/Snowy-27/ecoledirect
 ```
 
 ### Documentation
