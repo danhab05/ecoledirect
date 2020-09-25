@@ -1,1 +1,1 @@
-from ecoledirect import EcoleDirect
+from ecoledirectscrap import EcoleDirect
