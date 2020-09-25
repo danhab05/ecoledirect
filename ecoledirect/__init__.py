@@ -1,1 +1,1 @@
-from scrap_ecoledirect.EcoleDirect import EcoleDirect
+from ecoledirect import EcoleDirect
