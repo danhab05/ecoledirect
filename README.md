@@ -3,6 +3,7 @@ Github profile: https://github.com/snowy-27
 
 ### Description
 Ecole direct is a script that can get data from the website https://www.ecoledirecte.com/
+<br>
 Github link: https://github.com/Snowy-27/ecoledirect
 
 ### Installation
