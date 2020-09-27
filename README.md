@@ -20,7 +20,7 @@ pip install git+https://github.com/Snowy-27/ecoledirect
 First Tab:
 ```py
 from ecoledirect import Ecoledirect_bot
-user = EcoleDirect('username', 'password')
+user = Ecoledirect_bot('username', 'password')
 user.login()
 ```
 ```py
