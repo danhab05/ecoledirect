@@ -29,6 +29,7 @@ The function get notes is currently in developement.
 ```py
 print(user.get_notes()) 
 ```
+At the end of the script: 
 ```py
 user.close()
 ```
