@@ -4,7 +4,7 @@ import time
 from webdriver_manager.chrome import ChromeDriverManager
 import re
 
-class ecoledirectcom:
+class Ecoledirect_bot:
     driver = None
 
     def __init__(self, username, password, hidden=True):
