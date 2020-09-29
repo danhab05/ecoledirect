@@ -6,7 +6,10 @@ import re
 
 class Ecoledirect_bot:
     driver = None
-
+    matiere = []
+    homework = []
+    day = []
+    dic = {}
     def __init__(self, username, password, hidden=True):
         self.username = username
         self.password = password
@@ -47,18 +50,27 @@ class Ecoledirect_bot:
         page = self.driver.page_source
         soup = BeautifulSoup(page, 'lxml')
         days = soup.find_all('div', {'class': 'encartJour'})
+        currentday = ""
+        currenthome = ""
+        for div in days:
+            currentday = ""
+            currenthome = ""
+            h = div.find('h3')
+            currentday = h.text
+            self.day.append(h.text)
+            for txt in div.find_all('div', {'class': 'col-md-9'}):
+                self.homework.append(txt.text)
+                print(txt.text)
+                currenthome = txt.text
+            for h3 in div.find_all('h3', {'class': ""}):
+                if h3.text.isupper():
+                    self.matiere.append(h3.text)
+            self.dic[currentday] = currenthome
 
         i = 0
-        while i != 6:
-            if i == 5:
-                pass
-            else:
 
-                self.message.append(re.sub(r"\n+", "", days[i].text.replace('Contenu de la séance', '').replace('Effectué', '').replace('Donné le ', ' ').replace('par', ' ').replace('Mme', '').replace('M.', '').replace('.', '. ').strip()))
-            i+=1
 
         list = []
-        return self.message
 
     def close(self):
         self.driver.close()
