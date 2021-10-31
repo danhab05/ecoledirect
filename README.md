@@ -24,7 +24,7 @@ user = Ecoledirect_bot('username', 'password')
 user.login()
 ```
 ```py
-for k, el in dict(user.get_homework()).items():
+for k, el in user.get_homework().items():
     print(k, ":", "\n" + el)
 ```
 The function get notes is currently in developement. 
